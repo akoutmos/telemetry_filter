@@ -1,5 +1,7 @@
 # TelemetryFilter
 
+[![Hex.pm](https://img.shields.io/hexpm/v/telemetry_filter.svg)](http://hex.pm/packages/telemetry_filter) [![Build Status](https://travis-ci.org/akoutmos/telemetry_filter.svg?branch=master)](https://travis-ci.org/akoutmos/telemetry_filter)
+
 The purpose of this library is to filter out routes that shouldn't trigger
 Plug Telemetry events. This is useful for when you have routes where you
 do not Telemetry events triggered as not to pollute logs or metrics. For
