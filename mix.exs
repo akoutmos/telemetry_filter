@@ -9,6 +9,7 @@ defmodule TelemetryFilter.MixProject do
       name: "TelemetryFilter",
       source_url: "https://github.com/akoutmos/telemetry_filter",
       homepage_url: "https://hex.pm/packages/telemetry_filter",
+      description: "Simple Plug to filter out configured telemetry events",
       start_permanent: Mix.env() == :prod,
       docs: [
         main: "readme",
