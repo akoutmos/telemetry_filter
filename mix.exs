@@ -6,7 +6,15 @@ defmodule TelemetryFilter.MixProject do
       app: :telemetry_filter,
       version: "0.1.0",
       elixir: "~> 1.9",
+      name: "TelemetryFilter",
+      source_url: "https://github.com/akoutmos/telemetry_filter",
+      homepage_url: "https://hex.pm/packages/telemetry_filter",
       start_permanent: Mix.env() == :prod,
+      docs: [
+        main: "readme",
+        extras: ["README.md"]
+      ],
+      package: package(),
       deps: deps()
     ]
   end
@@ -15,6 +23,15 @@ defmodule TelemetryFilter.MixProject do
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  defp package() do
+    [
+      name: "telemetry_filter",
+      files: ~w(lib mix.exs README.md LICENSE CHANGELOG.md),
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/akoutmos/telemetry_filter"}
     ]
   end
 
