@@ -21,7 +21,8 @@ defmodule TelemetryFilter.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:plug, "~> 1.8"}
+      {:plug, "~> 1.8"},
+      {:telemetry, "~> 0.4"}
     ]
   end
 end
