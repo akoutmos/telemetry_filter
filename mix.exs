@@ -40,7 +40,8 @@ defmodule TelemetryFilter.MixProject do
   defp deps do
     [
       {:plug, "~> 1.8"},
-      {:telemetry, "~> 0.4"}
+      {:telemetry, "~> 0.4"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
