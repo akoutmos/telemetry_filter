@@ -9,8 +9,7 @@ polluted with calls to "/health" and "/metrics" every 5 seconds (or how ever lon
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `telemetry_filter` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `telemetry_filter` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -18,6 +17,18 @@ def deps do
     {:telemetry_filter, "~> 0.1.0"}
   ]
 end
+```
+
+Once your `mix.exs` file has been updated, you can replace the following call in `endpoint.ex`:
+
+```elixir
+Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
+```
+
+with:
+
+```elixir
+plug TelemetryFilter, filter_endpoints: ["/metrics", "/health"], event_prefix: [:phoenix, :endpoint]
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc) and published on
